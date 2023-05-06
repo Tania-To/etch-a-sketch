@@ -1,0 +1,120 @@
+body{
+    background-color:antiquewhite;
+}
+#container{
+    display: flex;
+    margin: 20px;
+    border: 8px solid red;
+    width: 400px;
+    height: 400px; 
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+#big-container{
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+
+}
+.row{
+    flex: 1;
+    
+   /* border: 1px solid black;*/
+    background-color: white;
+}
+.col{
+    
+}
+  #sizebtn{
+    display: flex;
+    justify-content: center;
+
+  }
+  .btns, .buttons{
+    margin-top: 10px;
+  }
+  p{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+.slidecontainer{
+    margin-left: 100px;
+        display:flex;
+        justify-content: center;
+    }
+  #mysize{
+    margin-top: 70px;
+    font-weight: bold;
+  }
+  .slider {
+
+    -webkit-appearance: none;
+    width: 250px;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-top: 70px;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background:black;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+ /* button{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 150px;
+    height: 70px;
+  }
+  button:hover{
+    border: 2px saddlebrown;
+
+  }*/
+  button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #464746;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 150px;
+  }
+  
+  button:hover {background-color: #8e3e67}
+  
+  button:active {
+    background-color: #8e3e67;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  #changeColor{
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+  }
