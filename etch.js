@@ -134,6 +134,10 @@ function changeColor()
             item.addEventListener('mouseenter', () => {
               item.style.backgroundColor = 'black';
             });
+            item.addEventListener('touchenter',(e)=>{
+                item.style.backgroundColor='black';
+                console.log('enter');
+            } );
         });
     }
     else {
