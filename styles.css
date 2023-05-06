@@ -1,22 +1,34 @@
 body{
-    background-color:antiquewhite;
+    background-color:rgba(193, 188, 182, 0.936);
 }
 #container{
     display: flex;
-    margin: 20px;
-    border: 8px solid red;
+    border: 8px solid rgb(0, 251, 255);
+    box-shadow: 9px 9px #666;
     width: 400px;
     height: 400px; 
 }
 h1{
     display: flex;
     justify-content: center;
+    font-family:Garamond, serif;
+    font-size: 48px;
+    font-weight: bolder;
+   color: #070707;
+    text-shadow: 3px 3px #d10bb3, 5px 5px #0e0bd1, 7px 7px #0bd118, 9px 9px #f0f406, 11px 11px #d1120b;
+    margin-left: 150px;
+    
+    /*background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+
+    
 }
 #big-container{
     display: flex;
    
-    justify-content: center;
-    align-items: center;
+   justify-content: center;
+   
 
 }
 .row{
@@ -24,9 +36,6 @@ h1{
     
    /* border: 1px solid black;*/
     background-color: white;
-}
-.col{
-    
 }
   #sizebtn{
     display: flex;
@@ -42,13 +51,15 @@ h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 .slidecontainer{
-    margin-left: 100px;
+    margin-left: 180px;
         display:flex;
         justify-content: center;
+        margin-top: 20px;
     }
   #mysize{
-    margin-top: 70px;
+  
     font-weight: bold;
+    margin-top: 20px;
   }
   .slider {
 
@@ -61,7 +72,8 @@ h1{
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
-    margin-top: 70px;
+    margin-top: 30px;
+   
   }
   
   .slider::-webkit-slider-thumb {
@@ -116,5 +128,21 @@ h1{
   #changeColor{
     display: flex;
     flex-direction: column;
-    margin: 2px;
+    margin-bottom: 120px;
+    margin-right: 40px;
+  }
+  .colorpick{
+    width: 40px;
+    border-radius: 50%;
+  }
+  .cls{
+    border: 10px solid #464746;
+    color: #fff;
+    background-color: #464746;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 120px;
+  }
+  .cls, #blacks, #rgbs, #clear{
+    margin-bottom: 10px;
   }

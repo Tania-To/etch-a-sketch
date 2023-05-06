@@ -8,6 +8,9 @@ const rangeSelector=document.getElementById('myRange');
 const gridItems = document.querySelectorAll('.row');
 const colors = document.querySelectorAll('.buttons');
 let newSize = document.querySelector('.slider');
+let newColor = document.querySelector('.colorpick');
+
+const mycolors = document.getElementById('myColors');
 
 let output = document.getElementById("mysize");
 output.innerHTML = rangeSelector.value +"x"+ rangeSelector.value;
@@ -15,7 +18,9 @@ output.innerHTML = rangeSelector.value +"x"+ rangeSelector.value;
 rangeSelector.oninput = function() {
   output.innerHTML = this.value +"x"+this.value ;
 }
-
+mycolors.oninput=function(){
+    console.log(mycolors.value);
+}
 function createGrid(m,n)
 {
     let y=0;
@@ -50,6 +55,14 @@ function createGrid(m,n)
         el.addEventListener('click', changeColor)
         
     });
+    newColor.addEventListener('input',function(){
+        gridItems.forEach((item) => {
+            item.addEventListener('mouseenter', () => {
+              item.style.backgroundColor = mycolors.value;
+            });
+        });
+    
+    });
 }
 
 createGrid(ROWS,COLS);
@@ -71,17 +84,25 @@ createGrid(ROWS,COLS);
     gridItems.forEach((item) => {
 
         item.addEventListener('mouseenter', () => {
-      item.style.backgroundColor ='black';
-    });
+        item.style.backgroundColor ='black';
+        });
    /*item.addEventListener('mouseleave', () => {
       item.classList.remove('hovered');
     });*/
-  });
+    });
 
-  colors.forEach((el)=>{
-    el.addEventListener('click', changeColor)
+    colors.forEach((el)=>{
+        el.addEventListener('click', changeColor)
+        
+    });
+    newColor.addEventListener('input',function(){
+        gridItems.forEach((item) => {
+            item.addEventListener('mouseenter', () => {
+              item.style.backgroundColor = mycolors.value;
+            });
+        });
     
-});
+    });
 
  }  
  let items = document.querySelectorAll('.col');
@@ -90,6 +111,7 @@ const buttons = document.querySelector('#btn');
 
 //buttons.addEventListener('click', modifiedGrid);
 newSize.addEventListener('input', modifiedGrid);
+
 // define a reusable function
 const randomRgbColor = () => {
     let r = Math.floor(Math.random() * 256); // Random between 0-255
@@ -100,7 +122,7 @@ const randomRgbColor = () => {
   
   const color1=document.getElementById('blacks');
   const color2 = document.getElementById('rgbs');
-  const color3 = document.getElementById('blues');
+ 
 
 let color=this.id;
 function changeColor()
@@ -113,15 +135,6 @@ function changeColor()
               item.style.backgroundColor = 'black';
             });
         });
-    }
-    else if(this.id==='blues')
-    {
-        gridItems.forEach((item) => {
-            item.addEventListener('mouseenter', () => {
-              item.style.backgroundColor = 'blue';
-            });
-        });
-        
     }
     else {
         gridItems.forEach((item) => {
