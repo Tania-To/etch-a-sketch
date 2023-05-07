@@ -43,7 +43,7 @@ function createGrid(m,n)
     } 
     const gridItems = document.querySelectorAll('.row');
     gridItems.forEach((item) => {
-        item.addEventListener('mouseenter', () => {
+        item.addEventListener('click', () => {
           item.style.backgroundColor = 'black';
         });
        /*item.addEventListener('mouseleave', () => {
@@ -57,7 +57,7 @@ function createGrid(m,n)
     });
     newColor.addEventListener('input',function(){
         gridItems.forEach((item) => {
-            item.addEventListener('mouseenter', () => {
+            item.addEventListener('click', () => {
               item.style.backgroundColor = mycolors.value;
             });
         });
@@ -83,7 +83,7 @@ createGrid(ROWS,COLS);
    
     gridItems.forEach((item) => {
 
-        item.addEventListener('mouseenter', () => {
+        item.addEventListener('click', () => {
         item.style.backgroundColor ='black';
         });
    /*item.addEventListener('mouseleave', () => {
@@ -97,7 +97,7 @@ createGrid(ROWS,COLS);
     });
     newColor.addEventListener('input',function(){
         gridItems.forEach((item) => {
-            item.addEventListener('mouseenter', () => {
+            item.addEventListener('click', () => {
               item.style.backgroundColor = mycolors.value;
             });
         });
@@ -131,7 +131,7 @@ function changeColor()
     if(this.id==='blacks')
     {
         gridItems.forEach((item) => {
-            item.addEventListener('mouseenter', () => {
+            item.addEventListener('click', () => {
               item.style.backgroundColor = 'black';
             });
             item.addEventListener('touchenter',(e)=>{
@@ -142,7 +142,7 @@ function changeColor()
     }
     else {
         gridItems.forEach((item) => {
-            item.addEventListener('mouseenter', () => {
+            item.addEventListener('click', () => {
               item.style.backgroundColor = randomRgbColor();
             });
         });
